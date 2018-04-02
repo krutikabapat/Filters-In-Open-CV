@@ -16,19 +16,19 @@ Mat src; Mat dst;
 char window_name[] = "Filter Demo 1";
 
 /// Function headers
-//int display_caption( char* caption );
-//int display_dst( int delay );
+int display_caption( char* caption );
+int display_dst( int delay );
 
 /**
  * function main
  */
  
- int main( int argc, char** argv, int i )
+ int main( int argc, char** argv)
  {
    namedWindow( window_name, CV_WINDOW_AUTOSIZE );
 
    /// Load the source image
-   src = imread( "/home/krutika/Documents/target/january 2k17/kk.png", 1 );
+   src = imread(argv[1], 1 );
 
    //if( display_caption( "Original Image" ) != 0 ) { return 0; }
 
@@ -38,7 +38,9 @@ char window_name[] = "Filter Demo 1";
    /// Applying Homogeneous blur
    //if( display_caption( "Homogeneous Blur" ) != 0 ) { return 0; }
    
-   
+   int i;
+   cout << "Enter i: " << endl;
+   cin >> i; 
    switch(i){
 
    case 1:{
